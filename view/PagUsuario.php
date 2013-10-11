@@ -21,11 +21,12 @@ $segur->seguriUser();
     </head>
     <body>
         <hr>
+        
         <div id="loginSesion">
             <h1>Bienvenido al sistema!</h1>
-        <h2>Usuario: <?php echo $_SESSION["usuarioactual"] ?> </h2><br>
-        <p>Entro correctamente al sistema.</p><br><br>
-        <a href="../Controller/salirSesion.php">Salir</a>
+            <h2>Usuario: <?php echo $_SESSION["usuarioactual"] ?> </h2><br>
+            <p>Entro correctamente al sistema.</p><br><br>
+            <a href="../Controller/salirSesion.php">Salir</a>
         </div>
     <center><h3>Ficha Del Usuario</h3></center> 
 
@@ -48,14 +49,11 @@ $segur->seguriUser();
                         <div class="row">
                             <div class="span6">
                                 <table>
-                                    <?php
-                                    foreach ($nuevo as $otras):
-                                        ?>  
-                                        <tr><td>Nombre:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otras['nombre'] ?>"/></td></tr>
-                                        <tr><td>Documento:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otras['documento_usuario'] ?>"/></td></tr>
-                                        <?php
-                                    endforeach;
-                                    ?> 
+                                    
+                                     
+                                        <tr><td>Nombre:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $nombreUs ?>"/></td></tr>
+                                        <tr><td>Documento:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $documUs ?>"/></td></tr>
+                                        
                                 </table><br>
                                 <h5><?php echo $mensaje; ?></h5>
 
@@ -114,11 +112,11 @@ $segur->seguriUser();
                                     <?php
                                     foreach ($nuevo as $otraposts):
                                         ?>  
-                                        <tr><td>Nombre:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otraposts['nombre'] ?>"/></td></tr>
-                                        <tr><td>Documento:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otraposts['documento_usuario'] ?>"/></td></tr>
-                                        <tr><td>Correo:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otraposts['correo'] ?>"/></td></tr>
-                                        <tr><td>Telefono: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otraposts['telefono'] ?>"/></td></tr>
-                                        <tr><td>Direccion:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otraposts['direccion'] ?>"/></td></tr>
+                                        <tr><td>Nombre:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $nombreUs ?>"/></td></tr>
+                                        <tr><td>Documento:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $documUs ?>"/></td></tr>
+                                        <tr><td>Correo:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $corr ?>"/></td></tr>
+                                        <tr><td>Telefono: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $tel ?>"/></td></tr>
+                                        <tr><td>Direccion:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $direc ?>"/></td></tr>
 
 
 
@@ -127,11 +125,12 @@ $segur->seguriUser();
                                 <div class="span6">
                                     <table>
 
-                                        <tr><td>Grado: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otraposts['grado'] ?>"/></td></tr>
-                                        <tr><td>Curso: </td> <td><input type="text" name="nombre" value="" disabled="disabled" value="nombre" placeholder="<?php echo $otraposts['curso'] ?>"/></td></tr>
-                                        <tr><td>Jornada: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otraposts['jornada'] ?>"/></td></tr>
-                                        <tr><td>Tipo de  usuario: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otraposts['tipo_usuario'] ?>"/></td></tr>
-                                        <tr><td>Estado de usuario:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $otraposts['estado_usuario'] ?>"/></td></tr>
+                                        
+                                        <tr><td>Grado: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $grado ?>"/></td></tr>
+                                        <tr><td>Curso: </td> <td><input type="text" name="nombre" value="" disabled="disabled" value="nombre" placeholder="<?php echo $curso?>"/></td></tr>
+                                        <tr><td>Jornada: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo utf8_encode($jor) ?>"/></td></tr>
+                                        <tr><td>Tipo de  usuario: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $tipo ?>"/></td></tr>
+                                        <tr><td>Estado de usuario:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $estado ?>"/></td></tr>
 
                                         <tr>
                                     </table> 

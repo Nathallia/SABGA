@@ -55,13 +55,12 @@ and open the template in the editor.
                                     <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 
                                         <?php
-                                        
-                                        If(isset($loginn))
-                                        echo $loginn;
+                                        If (isset($loginn))
+                                            echo $loginn;
                                         else
                                             echo 'nada';
                                         ?>
-                                       
+
                                     </ul>
                                 </li>
                                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Reservas <b class="caret"></b></a>
@@ -181,61 +180,61 @@ and open the template in the editor.
 
                 <div class="pagination pagination-centered">
                     <ul>
-<?php
-for ($i = 65; $i <= 90; $i++) {
-    $letra = chr($i);
-    echo ' <li ><a href="../Controller/PagPrincipalController.php?letra=' . $letra . '">' . $letra . '</a></li>';
-}
-?>
+                        <?php
+                        for ($i = 65; $i <= 90; $i++) {
+                            $letra = chr($i);
+                            echo ' <li ><a href="../Controller/PagPrincipalController.php?letra=' . $letra . '">' . $letra . '</a></li>';
+                        }
+                        ?>
 
                     </ul>
                 </div>
 
 
 
-<?php
-if (isset($_GET['title'])) {
-    header('Content-Type: text/html; charset=UTF-8');
-    include_once'../Controller/PagFichaMaterialController.php';
-} else
-if (!(isset($_GET['title']))) {
-    ?>
+                <?php
+                if (isset($_GET['title'])) {
+                    header('Content-Type: text/html; charset=UTF-8');
+                    include_once'../Controller/PagFichaMaterialController.php';
+                } else
+                if (!(isset($_GET['title']))) {
+                    ?>
                     <div  class="resulBarra">
                         <div class="plan">
 
 
                             <div class="plan-name-silver">
                                 <center>
-    <?php
-    header('Content-Type: text/html; charset=UTF-8');
+                                    <?php
+                                    header('Content-Type: text/html; charset=UTF-8');
 
-    echo '<h2>' . $let . ' </h2>';
-    ?> 
+                                    echo '<h2>' . $let . ' </h2>';
+                                    ?> 
                                 </center>
 
                             </div>
                             <div class="tablaBarra">
-    <?php
-    require_once '../model/ModeloSabga.php';
+                                <?php
+                                require_once '../model/ModeloSabga.php';
 
-    echo '<br>';
-    $obj = new ModeloSabga();
+                                echo '<br>';
+                                $obj = new ModeloSabga();
 
-    $res = $obj->BarraDeletra($let);
+                                $res = $obj->BarraDeletra($let);
 
-    foreach ($res as $re):
-        $codigoL = $re['codigo_clasificacion'];
-        ?>
+                                foreach ($res as $re):
+                                    $codigoL = $re['codigo_clasificacion'];
+                                    ?>
                                     <form name="forFicha" method="post">
                                         <table aling="right" ><tr>
                                             <a  href="../Controller/PagPrincipalController.php?title=<?php echo $re['titulo'] ?>&clasificacion=<?php echo $re['codigo_clasificacion'] ?>"  
                                                 onclick=""  title="Resultado"> <?php echo utf8_encode($re['titulo']) ?></a> 
                                             </tr></table>
 
-        <?php
-        echo '<br>';
-    endforeach;
-    ?>
+                                        <?php
+                                        echo '<br>';
+                                    endforeach;
+                                    ?>
                                     <!--<a href="#" onclick="javascript:document.form1.submit()" title="Abre el enlace">Enlace</a> -->
 
                                 </form>
@@ -244,9 +243,9 @@ if (!(isset($_GET['title']))) {
 
                         </div>
                     </div>
-    <?php
-}
-?>
+                    <?php
+                }
+                ?>
             </div>
 
         </div> 

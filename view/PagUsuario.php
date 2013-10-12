@@ -21,13 +21,7 @@ $segur->seguriUser();
     </head>
     <body>
         <hr>
-        
-        <div id="loginSesion">
-            <h1>Bienvenido al sistema!</h1>
-            <h2>Usuario: <?php echo $_SESSION["usuarioactual"] ?> </h2><br>
-            <p>Entro correctamente al sistema.</p><br><br>
-            <a href="../Controller/salirSesion.php">Salir</a>
-        </div>
+
     <center><h3>Ficha Del Usuario</h3></center> 
 
 

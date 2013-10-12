@@ -38,6 +38,9 @@ and open the template in the editor.
             $_SESSION["autentica"] = "SIP";
             foreach ($nuevo as $d):
              $_SESSION["usuarioactual"] =$d['nombre'];
+            $_SESSION["documentoUser"]=$d['documento_usuario'];
+            $_SESSION["correoUser"]=$d['correo'];
+            
             $nombreUs=$d['nombre'];
             $documUs=$d['documento_usuario'];
             $corr=$d['correo'];

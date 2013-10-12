@@ -11,7 +11,7 @@ and open the template in the editor.
         <link type="text/css" href="../bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
         <link type="text/css" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link type="text/css" href="../bootstrap/css/normalize.css" rel="stylesheet" media="screen">
-        <link type="text/css" href="../bootstrap/css/CSSsabgab.css" rel="stylesheet" media="screen">
+        <link type="text/css" href="../bootstrap/css/CSSsabg.css" rel="stylesheet" media="screen">
         <script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="../bootstrap/js/jquery.js"></script>
@@ -51,18 +51,14 @@ and open the template in the editor.
                         </ul>
                         <div class="pull-right">
                             <ul class="nav pull-right ">
-                                <li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown">Login<b class="caret"></b></a>
-                                    <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-
+                               
                                         <?php
                                         If (isset($loginn))
                                             echo $loginn;
                                         else
                                             echo 'nada';
                                         ?>
-
-                                    </ul>
-                                </li>
+                               
                                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Reservas <b class="caret"></b></a>
                                     <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
                                         <form method="post" action="login" accept-charset="UTF-8">
@@ -103,7 +99,7 @@ and open the template in the editor.
             <div class="texto">
                 <img src="../bootstrap/img/Logo Biblioteca.png" class="logo">
 
-                <img src="../bootstrap/img/Sin título-3.png" class="imagen">  
+                <img  src="../bootstrap/img/IMAGEN_PAG.png" class="imagen">  
 
 
 

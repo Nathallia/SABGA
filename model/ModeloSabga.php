@@ -37,13 +37,13 @@ class ModeloSabga {
         return $posts;
     }
 
-    function ResultadoBusqueda($V) {
+    function ResultadoBusqueda($parame,$V) {
         require '../model/conexionSabga.php';
         $conex = new conexionSabga();
         $link = $conex->conectarse();
 
 
-        if ($rs = mysqli_query($link, "call buscarMaterial ('autor','" . $V . "')")) {
+        if ($rs = mysqli_query($link, "call buscarMaterial ('".$parame."','".$V."')")) {
             $postsB = array();
             while ($row = mysqli_fetch_assoc($rs)) {
                 $postsB[] = $row;

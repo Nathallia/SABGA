@@ -10,17 +10,18 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        if (isset($_POST['campoText'])) {
+        if (isset($_POST['campoText']) && isset($_POST['campo_chec'])) {
 
             echo '';
         } else {
-            echo ' vacios';
+            echo 'llegaron vacios';
         }
 
+        
 
         require_once '../model/ModeloSabga.php';
         $busRE=new ModeloSabga();
-        $resultadoFinal = $busRE->ResultadoBusqueda($_POST['campoText']);
+        $resultadoFinal = $busRE->ResultadoBusqueda($_POST['campo_chec'],$_POST['campoText']);
         
 
         if ($resultadoFinal != null) {

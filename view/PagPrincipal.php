@@ -51,14 +51,14 @@ and open the template in the editor.
                         </ul>
                         <div class="pull-right">
                             <ul class="nav pull-right ">
-                               
-                                        <?php
-                                        If (isset($loginn))
-                                            echo $loginn;
-                                        else
-                                            echo 'nada';
-                                        ?>
-                               
+
+                                <?php
+                                If (isset($loginn))
+                                    echo $loginn;
+                                else
+                                    echo 'nada';
+                                ?>
+
                                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Reservas <b class="caret"></b></a>
                                     <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
                                         <form method="post" action="login" accept-charset="UTF-8">
@@ -138,24 +138,25 @@ and open the template in the editor.
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input type="checkbox" name="check"> </td>
+                                    <td><input type="checkbox" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="todos"> </td>
                                     <td><strong>Todos los campos</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" name="check"></td>
+                                    <td><input type="checkbox" name="check" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="autor"></td>
                                     <td><strong>Autor</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" name="check"></td>
+                                    <td><input type="checkbox" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="titulo"></td>
                                     <td><strong>Titulo</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" name="check"></td>
+                                    <td><input type="checkbox" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="materia" ></td>
                                     <td><strong>Materia</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" name="check"></td>
+                                    <td><input type="checkbox" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="codigo"></td>
                                     <td><strong>Codigo</strong></td>
+                                    <td><input  style="visibility: hidden" type="text" name="campo_chec"></td>
                                 </tr>
                             </tbody>
                         </table>

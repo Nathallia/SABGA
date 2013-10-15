@@ -8,6 +8,7 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
         <link type="text/css" href="../bootstrap/css/result.css" rel="stylesheet" media="screen">
+        <script src="../bootstrap/js/funcionEnviarReserva.js"> </script>
         <title></title>
         <script>
             function alerta()
@@ -18,7 +19,8 @@ and open the template in the editor.
         </script>
     </head>
     <body>
-  
+        <form name="ForResul" method="post">
+        
        <?php
         $indice=1;
        foreach ($resultadoFinal as $Re):
@@ -82,6 +84,7 @@ and open the template in the editor.
                                                         echo '<tr><td>Materia</td><td NOWRAP>'.utf8_encode($Re['materia']).'</td></tr>';
                                                        echo ' <tr><td>Editorial</td><td NOWRAP>'.utf8_encode($Re['nombre_editorial']).'</td></tr>';
                                                       echo ' <tr><td>Tipo material</td><td>'.utf8_encode($Re['tipo_material']).'</td></tr>';
+                                                      echo'<tr><td colspan=2><input type="text" name="reservaDato" value="'. $Re['codigo_clasificacion'].'  '.$Re['titulo'].'"/></td></tr>';
                                                    echo '</tbody>';
                                              echo '  </table>';
                      // echo '  </center>';
@@ -89,7 +92,7 @@ and open the template in the editor.
                        echo '  <br><br>';
                         
                           ?>  
-        <input type="submit" class="btn btn-inverse" name="eliminar" value ="Agregar a Reservas"  onclick="alerta()"/>
+            <input type="submit" class="btn btn-inverse" name="eliminar" value ="Agregar a Reservas"  onclick="DatoReserva()"/>
         <hr>
                           <?php  
                    echo ' </div>';
@@ -105,7 +108,8 @@ and open the template in the editor.
 endforeach;
 
        ?> 
-
+    
+        </form>
 
     </body>
 </html>

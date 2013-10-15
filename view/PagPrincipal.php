@@ -25,9 +25,7 @@ and open the template in the editor.
 
     </head>
     <body>
-        <script>
-
-        </script>
+       
         <style>
             ul.nav li.dropdown:hover > ul.dropdown-menu {
                 display: block;    
@@ -70,12 +68,9 @@ and open the template in the editor.
 
                                                     <tr>
                                                         <td><a href="#" class="btn"><i class="icon-trash"></i> </a></td>
-                                                        <td><strong>contraveneno</strong></td>
+                                                        <td><strong><?php if(isset($dM)){echo $dM;} else {echo 'aun sin reservas'; }?></strong></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td><a href="#" class="btn"><i class="icon-trash"></i> </a></td>
-                                                        <td><strong>Calculo 2</strong></td>
-                                                    </tr>
+                                                   
 
                                                 </tbody>
                                             </table>		

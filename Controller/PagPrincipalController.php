@@ -14,9 +14,15 @@ if (!(isset($_GET['letra']))) {
 $loginn = 'vacio';
 
 
+    if (isset($_POST['reservaDato'])) {
+       $dM=$_POST['reservaDato'];
+    } else {
+        echo '';
+    }
+ 
+   
 
-if (!empty($_SESSION["usuarioactual"]))
-{
+if (!empty($_SESSION["usuarioactual"])) {
     $loginn = '<li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown">' . $_SESSION["usuarioactual"] . '<b class="caret"></b></a>
                                     <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 
@@ -32,18 +38,17 @@ if (!empty($_SESSION["usuarioactual"]))
                                         <form method="post" name="formuUsuario" class="login" > 
                                         <button name="login"  type="button" onClick="datosUsuarioLogin()" class="btn btn-inverse" >Ver perfil</button><br><br>
                                        
-                                       <input  style="visibility: hidden" value="'.$_SESSION["documentoUser"].'" id="documento" name="documento"><input style="visibility: hidden" type="text" value="'.$_SESSION["correoUser"].'"  id="correo" name="correo">
+                                       <input  style="visibility: hidden" value="' . $_SESSION["documentoUser"] . '" id="documento" name="documento"><input style="visibility: hidden" type="text" value="' . $_SESSION["correoUser"] . '"  id="correo" name="correo">
                                        </form>
                                             </td>
                                          </tr>
                                        </table>
-                                       
-                                       
-                                    </div>
+                                        </div>
                                     </ul>
                                 </li>';
+    
     include_once '../view/PagPrincipal.php';
-}else{
+} else {
     $loginn = '<li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown"> Login <b class="caret"></b></a>
                                     <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 
@@ -57,7 +62,6 @@ if (!empty($_SESSION["usuarioactual"]))
                                     </ul>
                                 </li>';
 
-include_once '../view/PagPrincipal.php';
+    include_once '../view/PagPrincipal.php';
 }
-
 ?>

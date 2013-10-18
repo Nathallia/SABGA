@@ -69,8 +69,7 @@ and open the template in the editor.
 
                         <br><br>
 
-                        <input type="submit" class="btn btn-inverse" name="eliminar" value ="Agregar a Reservas"  onclick="alerta()"/>
-
+                        <a  class="btn btn-inverse" href="?id=<?php echo $fic['id_material']; ?>&action=add">Agregar a Reservas</a>
 
                     </center>
 

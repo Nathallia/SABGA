@@ -4,6 +4,7 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <html>
+    <?php session_start()?>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -92,7 +93,8 @@ and open the template in the editor.
                        echo '  <br><br>';
                         
                           ?>  
-            <input type="submit" class="btn btn-inverse" name="eliminar" value ="Agregar a Reservas"  onclick="DatoReserva()"/>
+            
+            <a  class="btn btn-inverse" href="?id=<?php echo $Re['id_material']; ?>&action=add" >Agregar a Reservas</a>
         <hr>
                           <?php  
                    echo ' </div>';

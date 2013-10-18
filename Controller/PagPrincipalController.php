@@ -1,6 +1,11 @@
 <?php
 
-session_start();
+
+ require_once("../clases/class.php");
+ $obj=new Trabajo();
+
+
+  session_start();
 require '../clases/classLetras.php';
 $let = 'A';
 if (!(isset($_GET['letra']))) {
@@ -14,13 +19,6 @@ if (!(isset($_GET['letra']))) {
 $loginn = 'vacio';
 
 
-    if (isset($_POST['reservaDato'])) {
-       $dM=$_POST['reservaDato'];
-    } else {
-        echo '';
-    }
- 
-   
 
 if (!empty($_SESSION["usuarioactual"])) {
     $loginn = '<li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown">' . $_SESSION["usuarioactual"] . '<b class="caret"></b></a>
@@ -48,7 +46,8 @@ if (!empty($_SESSION["usuarioactual"])) {
                                 </li>';
     
     include_once '../view/PagPrincipal.php';
-} else {
+} 
+else {
     $loginn = '<li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown"> Login <b class="caret"></b></a>
                                     <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 

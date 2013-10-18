@@ -3,6 +3,7 @@ To change this template, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;  AddCharset UTF-8 .php">
@@ -21,6 +22,7 @@ and open the template in the editor.
         <script src="../bootstrap/js/funcionDatosUsuario.js" language="JavaScript"></script>
         <script src="../bootstrap/js/funcionFicha.js" language="JavaScript"></script>
         <script src="../bootstrap/js/funcionBuscar.js" language="JavaScript"></script>
+        <script src="../bootstrap/js/funcionCarro.js" language="JavaScript"></script>
         <title>Sabga Reserva.</title>
 
     </head>
@@ -67,8 +69,8 @@ and open the template in the editor.
                                                 <tbody>
 
                                                     <tr>
-                                                        <td><a href="#" class="btn"><i class="icon-trash"></i> </a></td>
-                                                        <td><strong><?php if(isset($dM)){echo $dM;} else {echo 'aun sin reservas'; }?></strong></td>
+                                                        
+                                                        <td><strong><?php  include '../Controller/carrito.php';?></strong></td>
                                                     </tr>
                                                    
 

@@ -3,11 +3,7 @@ To change this template, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<?php
-require '../Controller/seguridad.php';
-$segur = new seguridadUsuario();
-$segur->seguriUser();
-?>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -43,11 +39,11 @@ $segur->seguriUser();
                         <div class="row">
                             <div class="span6">
                                 <table>
-                                    
-                                     
-                                        <tr><td>Nombre:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $nombreUs ?>"/></td></tr>
-                                        <tr><td>Documento:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $documUs ?>"/></td></tr>
-                                        
+
+
+                                    <tr><td>Nombre:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $nombreUs ?>"/></td></tr>
+                                    <tr><td>Documento:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $documUs ?>"/></td></tr>
+
                                 </table><br>
                                 <h5><?php echo $mensaje; ?></h5>
 
@@ -65,10 +61,10 @@ $segur->seguriUser();
                                         <?php foreach ($Dreserva as $reservasU): ?>
                                             <tr>
 
-                                                <td><?php echo $reservasU['codigo_clasificacion'] ?></td>
-                                                <td><?php echo date("d-m-Y"); ?></td>
-                                                <td><?php echo $reservasU['fecha_reserva'] ?></td>
-                                                <td><?php
+                                                <td NOWRAP><?php echo $reservasU['codigo_clasificacion'] ?></td>
+                                                <td NOWRAP><?php echo date("d-m-Y"); ?></td>
+                                                <td NOWRAP><?php echo $reservasU['fecha_reserva'] ?></td>
+                                                <td NOWRAP><?php
                                                     if ($reservasU['estado_reserva'] == 1) {
                                                         echo 'Vigente';
                                                     } else {
@@ -105,30 +101,54 @@ $segur->seguriUser();
                                 <table  >
                                     <?php
                                     foreach ($nuevo as $otraposts):
-                                        ?>  
-                                        <tr><td>Nombre:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $nombreUs ?>"/></td></tr>
-                                        <tr><td>Documento:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $documUs ?>"/></td></tr>
-                                        <tr><td>Correo:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $corr ?>"/></td></tr>
-                                        <tr><td>Telefono: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $tel ?>"/></td></tr>
-                                        <tr><td>Direccion:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $direc ?>"/></td></tr>
+                                        if ($tipo == 'Estudiante') {
+                                            ?>  
+                                            <tr><td>Nombre:</td> <td NOWRAP><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $nombreUs ?>"/></td></tr>
+                                            <tr><td>Documento:</td> <td NOWRAP> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $documUs ?>"/></td></tr>
+                                            <tr><td>Correo:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $corr ?>"/></td></tr>
+                                            <tr><td>Telefono: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $tel ?>"/></td></tr>
+                                            <tr><td>Direccion:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $direc ?>"/></td></tr>
 
 
 
-                                    </table> 
-                                </div> 
-                                <div class="span6">
-                                    <table>
+                                        </table> 
+                                    </div> 
+                                    <div class="span6">
+                                        <table>
 
-                                        
-                                        <tr><td>Grado: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $grado ?>"/></td></tr>
-                                        <tr><td>Curso: </td> <td><input type="text" name="nombre" value="" disabled="disabled" value="nombre" placeholder="<?php echo $curso?>"/></td></tr>
-                                        <tr><td>Jornada: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo utf8_encode($jor) ?>"/></td></tr>
-                                        <tr><td>Tipo de  usuario: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $tipo ?>"/></td></tr>
-                                        <tr><td>Estado de usuario:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $estado ?>"/></td></tr>
 
-                                        <tr>
-                                    </table> 
-                                    <?php
+                                            <tr><td>Grado: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $grado ?>"/></td></tr>
+                                            <tr><td>Curso: </td> <td><input type="text" name="nombre" value="" disabled="disabled" value="nombre" placeholder="<?php echo $curso ?>"/></td></tr>
+                                            <tr><td>Jornada: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo utf8_encode($jor) ?>"/></td></tr>
+                                            <tr><td>Tipo de  usuario: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $tipo ?>"/></td></tr>
+                                            <tr><td>Estado de usuario:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $estado ?>"/></td></tr>
+
+                                            <tr>
+                                        </table> 
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <table>
+
+                                            <tr><td>Nombre:</td> <td NOWRAP><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $nombreUs ?>"/></td></tr>
+                                            <tr><td>Documento:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $documUs ?>"/></td></tr>
+                                            <tr><td>Correo:</td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $corr ?>"/></td></tr>
+                                            <tr><td>Telefono: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $tel ?>"/></td></tr>
+                                            <tr><td>Direccion:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $direc ?>"/></td></tr>
+
+
+
+                                        </table> 
+                                    </div> 
+                                    <div class="span6">
+                                        <table>
+                                            <tr><td>Tipo de  usuario: </td> <td><input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $tipo ?>"/></td></tr>
+                                            <tr><td>Estado de usuario:</td> <td> <input type="text" name="nombre" value="" disabled="disabled" placeholder="<?php echo $estado ?>"/></td></tr>
+
+                                            <tr>
+                                        </table> 
+                                        <?php
+                                    }
                                 endforeach;
                                 ?> 
                             </div>

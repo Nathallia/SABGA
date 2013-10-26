@@ -12,48 +12,64 @@ and open the template in the editor.
 
         <?php
         if (isset($_POST['documento']) && isset($_POST['correo'])) {
-            
+            $doc = $_POST['documento'];
+            $corr = $_POST['correo'];
         } else {
-            echo 'no hay nada';
+            $doc = $docuR;
+            $corr = $correR;
         }
 
         require_once '../model/ModeloSabga.php';
 
-        $doc = $_POST['documento'];
-        $corr = $_POST['correo'];
+
+
         $claUs = new ModeloSabga();
         $nuevo = $claUs->DatosUsuario($doc, $corr);
 
 
 
-        $Dreserva = $claUs->Reserva($_POST['documento']);
+        $Dreserva = $claUs->Reserva($doc);
         if ($Dreserva != null) {
             $mensaje = '';
         } else {
             $mensaje = 'Aun no tiene historial de reservas';
         }
         if ($nuevo != null) {
-            session_start();
+            @session_start();
             //Guardamos dos variables de sesiÃ³n que nos auxiliarÃ¡ para saber si se estÃ¡ o no "logueado" un usuario
             $_SESSION["autentica"] = "SIP";
             foreach ($nuevo as $d):
-             $_SESSION["usuarioactual"] =$d['nombre'];
-            $_SESSION["documentoUser"]=$d['documento_usuario'];
-            $_SESSION["correoUser"]=$d['correo'];
-            
-            $nombreUs=$d['nombre'];
-            $documUs=$d['documento_usuario'];
-            $corr=$d['correo'];
-            $tel=$d['telefono'];
-            $direc=$d['direccion'];
-            $grado=$d['grado'];
-            $curso=$d['curso'];
-            $jor=$d['jornada'];
-            $tipo=$d['tipo_usuario'];
-            $estado=$d['estado_usuario'];
+                $_SESSION["usuarioactual"] = $d['nombre'];
+                $_SESSION["documentoUser"] = $d['documento_usuario'];
+                $_SESSION["correoUser"] = $d['correo'];
+
+                if ($d['tipo_usuario'] == 'Estudiante') {
+                    $nombreUs = $d['nombre'];
+                    $documUs = $d['documento_usuario'];
+                    $corr = $d['correo'];
+                    $tel = $d['telefono'];
+                    $direc = $d['direccion'];
+                    $grado = $d['grado'];
+                    $curso = $d['curso'];
+                    $jor = $d['jornada'];
+                    $tipo = $d['tipo_usuario'];
+                    $estado = $d['estado_usuario'];
+                } else {
+                    $nombreUs = $d['nombre'];
+                    $documUs = $d['documento_usuario'];
+                    $corr = $d['correo'];
+                    $tel = $d['telefono'];
+                    $direc = $d['direccion'];
+                    $grado = 'no';
+                    $curso = 'no';
+                    $jor = 'no';
+                    $tipo = $d['tipo_usuario'];
+                    $estado = $d['estado_usuario'];
+                }
+
             endforeach;
-                
-            
+
+
             include '../view/PagUsuario.php';
         } else {
 

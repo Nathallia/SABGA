@@ -110,7 +110,7 @@ $let='R';
 }
 if ($_REQUEST['letra']=='S')
 {
-  echo "S";
+ 
 $let='S';
 }
 if ($_REQUEST['letra']=='T')

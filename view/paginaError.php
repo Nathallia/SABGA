@@ -13,8 +13,7 @@ and open the template in the editor.
          <div class="resulBarra">
             <div class="plan">
                 <h3>
-                No se encontraron datos, verifique la información,
-              recuerde que debe estar registrado en su biblioteca para acceder a este servicio.
+                No se encontraron datos, recuerde registrarse personalmente en la biblioteca de la institucion.
             </h3>
             </div>
             

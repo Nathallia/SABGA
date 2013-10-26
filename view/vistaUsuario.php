@@ -1,15 +1,16 @@
+<!DOCTYPE html>
 <!--
-To change this template, choose Tools | Templates
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<!DOCTYPE html>
-
 <html>
-<!--  <?php
+ <?php
 //require '../clases/seguridad.php';
 //$segur = new seguridadUsuario();
 //$segur->seguriUser();
-?>  -->
+require '../Controller/PagPrincipalController.php';
+?>  
 
     <head>
         <meta http-equiv="Content-Type" content="text/html;  AddCharset UTF-8 .php">
@@ -35,7 +36,11 @@ and open the template in the editor.
     </head>
     <body>
 
-
+        <style>
+            ul.nav li.dropdown:hover > ul.dropdown-menu {
+                display: block;    
+            }
+        </style>
 
         <div class="navbar navbar-inverse nav">
             <div class="navbar-inner">
@@ -179,73 +184,8 @@ and open the template in the editor.
 
             <div class="contenidoF" id="contenidoF" accept-charset="UTF-8" >
 
-                <div class="pagination pagination-centered">
-                    <ul>
-                        <?php
-                        for ($i = 65; $i <= 90; $i++) {
-                            $letra = chr($i);
-                            echo ' <li ><a href="../Controller/PagPrincipalController.php?letra=' . $letra . '">' . $letra . '</a></li>';
-                        }
-                        ?>
-
-                    </ul>
-                </div>
-
-
-
                 <?php
-                if (isset($_GET['title'])) {
-                    header('Content-Type: text/html; charset=UTF-8');
-                    include_once'../Controller/PagFichaMaterialController.php';
-                } else
-                if (!(isset($_GET['title']))) {
-                    ?>
-                    <div  class="resulBarra">
-                        <div class="plan">
-
-
-                            <div class="plan-name-silver">
-                                <center>
-                                    <?php
-                                    header('Content-Type: text/html; charset=UTF-8');
-
-                                    echo '<h2>' . $let . ' </h2>';
-                                    ?> 
-                                </center>
-
-                            </div>
-                            <div class="tablaBarra">
-                                <?php
-                                require_once '../model/ModeloSabga.php';
-
-                                echo '<br>';
-                                $obj = new ModeloSabga();
-
-                                $res = $obj->BarraDeletra($let);
-
-                                foreach ($res as $re):
-                                    $codigoL = $re['codigo_clasificacion'];
-                                    ?>
-                                    <form name="forFicha" method="post">
-                                        <table aling="right" ><tr>
-                                            <a  href="../Controller/PagPrincipalController.php?title=<?php echo $re['titulo'] ?>&clasificacion=<?php echo $re['codigo_clasificacion'] ?>"  
-                                                onclick=""  title="Resultado"> <?php echo utf8_encode($re['titulo']) ?></a> 
-                                            </tr></table>
-
-                                        <?php
-                                        echo '<br>';
-                                    endforeach;
-                                    ?>
-                                    <!--<a href="#" onclick="javascript:document.form1.submit()" title="Abre el enlace">Enlace</a> -->
-
-                                </form>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <?php
-                }
+                                include '../Controller/PagUsuarioController.php';
                 ?>
             </div>
 

@@ -25,6 +25,7 @@ and open the template in the editor.
         
 
         if ($resultadoFinal != null) {
+            
            include_once '../view/pagResultado.php';
         } else {
             include '../view/errorBusqueda.php';

@@ -5,7 +5,7 @@
  $obj=new Trabajo();
 
 
-  session_start();
+ @session_start();
 require '../clases/classLetras.php';
 $let = 'A';
 if (!(isset($_GET['letra']))) {
@@ -45,22 +45,29 @@ if (!empty($_SESSION["usuarioactual"])) {
                                     </ul>
                                 </li>';
     
-    include_once '../view/PagPrincipal.php';
+  
 } 
 else {
-    $loginn = '<li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown"> Login <b class="caret"></b></a>
+
+    $loginn = '<li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown"> Acceder <b class="caret"></b></a>
                                     <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 
                                        <div id="loginDiv">
                                        <form method="post" name="formuUsuario" class="login" > 
                                        <input style="margin-bottom: 15px;" type="number" placeholder="ingrese su documento" id="documento" name="documento"><br> 
-                                       <input style="margin-bottom: 15px;" type="text" placeholder="Ingrese correo" id="correo" name="correo"><br>
+                                       <input style="margin-bottom: 15px;" type="text" placeholder="Ingrese correo electronico" id="correo" name="correo"><br>
                                        <button name="login"  type="button" onClick="datosUsuarioLogin()" class="btn btn-inverse" >Ingresar</button><br><br>
                                        </form>  </div>
 
                                     </ul>
                                 </li>';
 
-    include_once '../view/PagPrincipal.php';
+
 }
+
+  include_once '../view/PagPrincipal.php';
+
+//--------------reserva
+
+
 ?>

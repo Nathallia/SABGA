@@ -50,7 +50,7 @@ and open the template in the editor.
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li class="divider-vertical"></li>
-                            <li><a href="../Controller/PagPrincipalController.php"><i class="icon-home icon-white"></i> Inicio</a></li>
+                            <li><a href="../Controller/PagPrincipalController.php"><i class="icon-home icon-white"></i> <strong>Inicio</strong></a></li>
                         </ul>
                         <div class="pull-right">
                             <ul class="nav pull-right ">
@@ -84,7 +84,7 @@ and open the template in the editor.
                                         </form>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Ayuda <b class="caret"></b></a>
+                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Ayuda</strong> <b class="caret"></b></a>
 
                                 </li>
 
@@ -209,7 +209,7 @@ and open the template in the editor.
                                     <?php
                                     header('Content-Type: text/html; charset=UTF-8');
 
-                                    echo '<h2>' . $let . ' </h2>';
+                                    echo '<h2>'. $let .' </h2>';
                                     ?> 
                                 </center>
 

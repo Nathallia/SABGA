@@ -21,7 +21,7 @@ $loginn = 'vacio';
 
 
 if (!empty($_SESSION["usuarioactual"])) {
-    $loginn = '<li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown">' . $_SESSION["usuarioactual"] . '<b class="caret"></b></a>
+    $loginn = '<li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown"><strong>' . $_SESSION["usuarioactual"] . '</strong><b class="caret"></b></a>
                                     <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 
                                     <div class="sesionClose">
@@ -45,27 +45,27 @@ if (!empty($_SESSION["usuarioactual"])) {
                                     </ul>
                                 </li>';
     
-  
+   include_once '../view/PagPrincipal.php';
 } 
 else {
 
-    $loginn = '<li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown"> Acceder <b class="caret"></b></a>
+    $loginn = '<li class="dropdown "><a href="#" class="dropdown-toggle " data-toggle="dropdown"> <strong>Acceder </strong><b class="caret"></b></a>
                                     <ul class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 
                                        <div id="loginDiv">
                                        <form method="post" name="formuUsuario" class="login" > 
-                                       <input style="margin-bottom: 15px;" type="number" placeholder="ingrese su documento" id="documento" name="documento"><br> 
-                                       <input style="margin-bottom: 15px;" type="text" placeholder="Ingrese correo electronico" id="correo" name="correo"><br>
+                                       <input style="margin-bottom: 15px;"  placeholder="ingrese su documento" id="documento" name="documento"><br> 
+                                       <input style="margin-bottom: 15px;"  placeholder="Ingrese correo electronico" id="correo" name="correo"><br>
                                        <button name="login"  type="button" onClick="datosUsuarioLogin()" class="btn btn-inverse" >Ingresar</button><br><br>
                                        </form>  </div>
 
                                     </ul>
                                 </li>';
 
-
+ include_once '../view/PagPrincipal.php';
 }
 
-  include_once '../view/PagPrincipal.php';
+ 
 
 //--------------reserva
 

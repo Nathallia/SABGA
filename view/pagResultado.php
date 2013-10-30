@@ -65,19 +65,17 @@ and open the template in the editor.
 
                 echo ' <tbody>';
                 echo '   <tr>';
-                echo '    <td>Titulo</td>';
+                echo '    <td>Titulo: </td>';
                 echo '    <td NOWRAP>' . utf8_encode($Re['titulo']) . '</td>';
                 echo '    </tr>';
                 echo '    <tr>';
-                echo '    <td>Autor</td>';
+                echo '    <td>Autor: </td>';
                 echo '    <td NOWRAP>' . utf8_encode($Re['autores']) . '</td>';
                 echo '      </tr>';
                 echo '    <tr>';
-                echo '    <td>Publicación</td>';
-                echo '    <td NOWRAP>' . utf8_encode($Re['publicacion']) . '</td></tr>';
-                echo '<tr><td>Materia</td><td NOWRAP>' . utf8_encode($Re['materia']) . '</td></tr>';
-                echo ' <tr><td>Editorial</td><td NOWRAP>' . utf8_encode($Re['nombre_editorial']) . '</td></tr>';
-                echo ' <tr><td>Tipo material</td><td>' . utf8_encode($Re['tipo_material']) . '</td></tr>';
+                echo '<tr><td>Materia: </td><td NOWRAP>' . utf8_encode($Re['materia']) . '</td></tr>';
+                echo ' <tr><td>Editorial: </td><td NOWRAP>' . utf8_encode($Re['nombre_editorial']) . '</td></tr>';
+                echo ' <tr><td NOWRAP>Tipo material: </td><td>' . utf8_encode($Re['tipo_material']) . '</td></tr>';
                 echo '</tbody>';
                 echo '  </table>';
                 // echo '  </center>';

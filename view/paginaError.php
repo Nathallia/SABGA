@@ -13,7 +13,7 @@ and open the template in the editor.
          <div class="resulBarra">
             <div class="plan">
                 <h3>
-                No se encontraron datos, recuerde registrarse personalmente en la biblioteca de la institucion.
+                No se encontraron datos, recuerde registrarse personalmente en la biblioteca de la institución.
             </h3>
             </div>
             

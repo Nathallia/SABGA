@@ -47,29 +47,41 @@ function principal(){
 
 
 //_________________________________________________________________________
-function buscarMa(){ //esta es la funcion que envia los datos de manea asincrona
+function buscarM(){ //esta es la funcion que envia los datos de manea asincrona
 	//div donde  mostrararemos  los datos de la consulta 
-	divResultado = document.getElementById('contenidoF');
+    divResultado = document.getElementById('contenidoF');
 
-	//tomamos el valor enviado del formulario de envio
-	campoText=document.formulario.campoText.value;
-         
-	//instanciamos el objetoAjax
-	ajax=objetoAjax();
-	//usamos el medoto POST
-	//archivo que realizará la operacion
-	ajax.open("POST", "../Controller/PagresultadoController.php",true);
-	//mostramos una imagen mientras cargamos el resultado de la consulta
-	divResultado.innerHTML= '<img src="images/ajax.gif">';
-	ajax.onreadystatechange=function() {
-		if (ajax.readyState==4) {
-			//visualizamos el resultado correscpondiente
-			divResultado.innerHTML = ajax.responseText
-		}
-	}
-	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	//enviando los valoress
-	ajax.send('campoText='+campoText);
+    //tomamos el valor enviado del formulario de envio
+    campoText = document.formulario.campoText.value;
+    campo_chec = document.formulario.campo_chec.value;
+    //instanciamos el objetoAjax
+    ajax = objetoAjax();
+
+    if (campoText == "")
+    {
+        alert('Debe ingresar el valor de búsqueda');
+    }
+    else
+    if(campo_chec=="")
+    {
+        
+    }
+
+    else
+    {
+        ajax.open("POST", "../Controller/PagresultadoController.php", true);
+        //mostramos una imagen mientras cargamos el resultado de la consulta
+        divResultado.innerHTML = '<img src="images/ajax.gif">';
+        ajax.onreadystatechange = function() {
+            if (ajax.readyState == 4) {
+                //visualizamos el resultado correscpondiente
+                divResultado.innerHTML = ajax.responseText
+            }
+        }
+        ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        //enviando los valoress
+        ajax.send('campoText=' + campoText + '&campo_chec=' + campo_chec);
+    }
        
 }
 

@@ -54,8 +54,8 @@ else {
 
                                        <div id="loginDiv">
                                        <form method="post" name="formuUsuario" class="login" > 
-                                       <input style="margin-bottom: 15px;"  placeholder="ingrese su documento" id="documento" name="documento"><br> 
-                                       <input style="margin-bottom: 15px;"  placeholder="Ingrese correo electronico" id="correo" name="correo"><br>
+                                       <input style="margin-bottom: 15px;"   type="text"  placeholder="Ingrese su documento" id="documento" name="documento"><br> 
+                                       <input style="margin-bottom: 15px;"   type="text"  placeholder="Ingrese correo electrónico" id="correo" name="correo"><br>
                                        <button name="login"  type="button" onClick="datosUsuarioLogin()" class="btn btn-inverse" >Ingresar</button><br><br>
                                        </form>  </div>
 

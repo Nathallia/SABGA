@@ -27,7 +27,7 @@ and open the template in the editor.
         <script src="../bootstrap/js/funciones.js" language="JavaScript"></script>
         <script src="../bootstrap/js/funcionDatosUsuario.js" language="JavaScript"></script>
         <script src="../bootstrap/js/funcionFicha.js" language="JavaScript"></script>
-        <script src="../bootstrap/js/funcionBuscar.js" language="JavaScript"></script>
+        <script src="../bootstrap/js/funcionBuscarMaterial.js" language="JavaScript"></script>
         <script src="../bootstrap/js/funcionCarro.js" language="JavaScript"></script>
 
         <title>Sabga Reserva.</title>
@@ -128,7 +128,7 @@ and open the template in the editor.
                     <form  method="post" action="" name="formulario">
 
                         <input id="busque"  name="campoText" type="text" class="input-medium search-query" placeholder="Ingrese su búsqueda" >
-                        <button type="button" onClick="buscarMa()" class="btn btn-inverse" >Buscar</button><br><br>
+                        <button type="button" onClick="buscarMate()" class="btn btn-inverse" >Buscar</button><br><br>
 
                         <br>
 
@@ -139,7 +139,7 @@ and open the template in the editor.
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input type="checkbox" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="todos"> </td>
+                                    <td><input type="checkbox" checked="true" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="todos"> </td>
                                     <td><strong>Todas las opciones</strong></td>
 
                                 </tr>
@@ -164,7 +164,7 @@ and open the template in the editor.
 
                             </tbody>
                         </table>
-                        <input  style="visibility: hidden" type="text" name="campo_chec">
+                        <input  style="visibility: hidden" type="text" name="campo_chec" value="todos">
                     </form>
 
 

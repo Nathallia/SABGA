@@ -6,7 +6,7 @@ $obj = new Trabajo();
 <script src="http://static.scripting.com/github/bootstrap2/js/jquery.js"></script>
 <script src="http://static.scripting.com/github/bootstrap2/js/bootstrap-transition.js"></script>
 <script src="http://static.scripting.com/github/bootstrap2/js/bootstrap-modal.js"></script>
-<script src="../bootstrap/js/FuncionDatoLogRese.js" language="JavaScript"></script>
+
 
 <div id="tabla">
 
@@ -110,46 +110,46 @@ $obj = new Trabajo();
                                 </div><!-- /.modal-content -->
                             </div><!-- /.modal-dialog -->
                         </div><!-- /.modal -->
-        <?php
-    } else {
-        ?>
+                        <?php
+                    } else {
+                        ?>
 
                         <a style="width: 100%" data-toggle="modal" href="#myModal" class="btn btn-primary btn-inverse">Realizar reserva</a>
 
 
-                                                                                                     <!-- Modal -->
-                                                                                                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                                                                                         <div class="modal-dialog">
-                                                                                                             <div class="modal-content">
-                                                                                                                 <div class="modal-header">
-                                                                                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                                                                     <h4 class="modal-title">Acceder</h4>
-                                                                                                                 </div>
-                                                                                                                 <form method="post" name="formuUsuario" class="login" > 
-                                                                                                                     <div class="modal-body">
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title">Acceder</h4>
+                                    </div>
+                                    <form method="post" name="formuReser"> 
+                                        <div class="modal-body">
 
 
-                                                                                                                         <input style="margin-bottom: 15px;" type="number" placeholder="ingrese su documento" id="documento" name="documento"><br> 
-                                                                                                                         <input style="margin-bottom: 15px;" type="text" placeholder="Ingrese correo electronico" id="correo" name="correo"><br>
-                                                                                                                     </div>
+                                            <input style="margin-bottom: 15px;"  type="text" placeholder="ingrese su documento" id="documento" name="documento"><br> 
+                                            <input style="margin-bottom: 15px;" type="text"  placeholder="Ingrese correo electronico" id="correo" name="correo"><br>
+                                        </div>
 
-                                                                                                                     <div class="modal-footer">
-                                                                                                                         <button name="login"  type="button" onClick="datosUsuarioRese()" class="btn btn-inverse" >Ingresar</button><br><br>
-                                                                                                                     </div>
-                                                                                                                 </form> 
-                                                                                                             </div><!-- /.modal-content -->
-                                                                                                         </div><!-- /.modal-dialog -->
-                                                                                                     </div><!-- /.modal -->
+                                        <div class="modal-footer">
+                                            <button  type="button" onClick="enviReserva()" class="btn btn-inverse" >Ingresar</button><br><br>
+                                        </div>
+                                    </form> 
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
 
 
-        <?php
-    }
-    ?>
+                        <?php
+                    }
+                    ?>
 
-                    </td>
-                </tr>
-            </table>
-        </div>
+                </td>
+            </tr>
+        </table>
+    </div>
 
     <?php
 } else {

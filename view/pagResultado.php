@@ -10,23 +10,19 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
         <link type="text/css" href="../bootstrap/css/result.css" rel="stylesheet" media="screen">
         <script src="../bootstrap/js/funcionEnviarReserva.js"></script>
+        <script src="../bootstrap/css/cssAlert.js"></script>
+        <link type="text/css" href="../bootstrap/js/cssAlert.css" rel="stylesheet" media="screen">
         <title></title>
-        <script>
-            function alerta()
-            {
-                alert('Agrego este material a sus reservas, recuerde realizar las reservas pendientes dando click en el boton Reservas de la barra de herramientas ');
 
-            }
-        </script>
     </head>
     <body>
         <form name="ForResul" method="post">
 
             <?php
             $indice = 1;
-            
-                require '../clases/reserva.php';
-                $objRese = new reserva();
+
+            require '../clases/reserva.php';
+            $objRese = new reserva();
             foreach ($resultadoFinal as $Re):
 
                 $hei = 500;
@@ -65,7 +61,7 @@ and open the template in the editor.
 
                 echo ' <tbody>';
                 echo '   <tr>';
-                echo '    <td>Titulo: </td>';
+                echo '    <td>Título: </td>';
                 echo '    <td NOWRAP>' . utf8_encode($Re['titulo']) . '</td>';
                 echo '    </tr>';
                 echo '    <tr>';
@@ -81,19 +77,17 @@ and open the template in the editor.
                 // echo '  </center>';
 
                 echo '  <br><br>';
-               
+
                 $ejem = $objRese->ValidaDisponibilidad($Re['id_material']);
                 $opcion;
 
                 if ($Re['id_clase_material'] == 2) {
                     $opcion = 'Este material No se puede reservar';
                 } else
-                if ($ejem ==null) {
+                if ($ejem == null) {
                     $opcion = 'No hay ejemplares disponibles';
                 } else {
-                    $opcion = '<a  class="btn btn-inverse" href="?id=' . $Re['id_material'] . '&action=add" >Agregar a Reservas</a> <hr>';
-                
-                    
+                    $opcion = '<a   class="btn btn-inverse" href="?id=' . $Re['id_material'] . '&action=add" >Agregar a Reservas</a> <hr>';
                 }
 
                 echo $opcion;
@@ -111,7 +105,8 @@ and open the template in the editor.
             endforeach;
             ?> 
 
-        </form>
+<!--<input type="button" value = "Test the alert" onclick="alert('Agrego este material a sus reservas, recuerde realizar las reservas pendientes dando click en el boton Reservas de la barra de herramientas');" />-->
 
+        </form>
     </body>
 </html>

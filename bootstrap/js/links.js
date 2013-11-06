@@ -59,7 +59,7 @@ function buscarM(){ //esta es la funcion que envia los datos de manea asincrona
 
     if (campoText == "")
     {
-        alert('Debe ingresar el valor de búsqueda');
+        alert('Debe ingresar el valor de búsqueda343434');
     }
     else
     if(campo_chec=="")

@@ -13,6 +13,7 @@ if (isset($_GET['material']) && isset($_GET['doc'])) {
     $mi_array = unserialize($a);
 
     $documentoUser = $_GET['doc'];
+    
     $fechaR = date("Y-m-d");
     require '../model/conexionSabga.php';
     $conex = new conexionSabga();

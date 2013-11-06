@@ -116,6 +116,7 @@ class Trabajo
                         if(isset($_SESSION["carro"][$id]))
 
                                  $_SESSION["carro"][$id]++;
+                             
                         else
                                  $_SESSION["carro"][$id]=1;
                     break;

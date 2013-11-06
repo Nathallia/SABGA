@@ -18,8 +18,9 @@ function objetoAjax() {
 
 //-------------------------------------------------------------------------
 
+
 //_________________________________________________________________________
-function buscarMate() { //esta es la funcion que envia los datos de manea asincrona
+function buscarMate() { //esta es la funcion que envia los datos 
     //div donde  mostrararemos  los datos de la consulta 
     divResultado = document.getElementById('contenidoF');
 
@@ -29,14 +30,23 @@ function buscarMate() { //esta es la funcion que envia los datos de manea asincr
     //instanciamos el objetoAjax
     ajax = objetoAjax();
 
+
+    expr = /^\s+$/;
     if (campoText == "")
     {
-        alert('Debe ingresar el valor de búsqueda');
+        alert('<div class="alert alert-dismissable"> <button type="button" class="close" data-dismiss="alert" aria-hidden="true">Debe ingresar el valor de búsqueda3</button> <strong>Warning!</strong> Best check yo self, you re not looking too good. </div>');
+        
+  
     }
     else
-    if(campo_chec=="")
+    if (expr.test(campoText)) {
+        alert("El valor de busqueda no pude estar vacio");
+        return false;
+    }
+    else
+    if (campo_chec == "")
     {
-        
+
     }
 
     else

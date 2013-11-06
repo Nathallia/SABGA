@@ -32,14 +32,15 @@ function datosUsuarioLogin() { //esta es la funcion que envia los datos de manea
 
     expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-
+  var a = documento.indexOf('.');
+    var b = documento.indexOf(',');
+    
     if (correo == "" && documento == "")
     {
         alert('Debe ingresar todos los campos');
     }
     else
-        var a = documento.indexOf('.');
-    var b = documento.indexOf(',');
+      
     if (isNaN(documento) || documento.length > 12 || a != -1 || b != -1) {
         alert("El campo documento debe tener sólo números con un maximo de 12.");
 

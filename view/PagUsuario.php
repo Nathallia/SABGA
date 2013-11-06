@@ -94,7 +94,7 @@ and open the template in the editor.
                         <br>
                         <p class="lead">Información personal</p>
                         <center>
-                            <p>Recuerde que para modificar sus datos debe dirijirse a su biblioteca.</p>
+                            <p>Recuerde que para modificar sus datos debe dirigirse a la biblioteca de la Institución.</p>
                             <div class="span6 ">
 
 

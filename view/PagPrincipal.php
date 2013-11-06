@@ -5,11 +5,11 @@ and open the template in the editor.
 <!DOCTYPE html>
 
 <html>
-<!--  <?php
+    <!--  <?php
 //require '../clases/seguridad.php';
 //$segur = new seguridadUsuario();
 //$segur->seguriUser();
-?>  -->
+    ?>  -->
 
     <head>
         <meta http-equiv="Content-Type" content="text/html;  AddCharset UTF-8 .php">
@@ -29,12 +29,11 @@ and open the template in the editor.
         <script src="../bootstrap/js/funcionFicha.js" language="JavaScript"></script>
         <script src="../bootstrap/js/funcionBuscarMaterial.js" language="JavaScript"></script>
         <script src="../bootstrap/js/funcionCarro.js" language="JavaScript"></script>
-
-        <title>Sabga Reserva.</title>
+        <script src="../bootstrap/js/funcionReseL.js" language="JavaScript"></script>
+        <title>SABGA</title>
 
     </head>
     <body>
-
 
 
         <div class="navbar navbar-inverse nav">
@@ -103,7 +102,6 @@ and open the template in the editor.
                 <img  src="../bootstrap/img/IMAGEN_PAG.png" class="imagen">  
 
 
-
                 <div class="text"> 
                     <h2>Institución Educativa Gilberto Alzate Avendaño</h2>
                     <h1 style="text-align: center">SABGA</h1>
@@ -139,32 +137,32 @@ and open the template in the editor.
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input type="checkbox" checked="true" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="todos"> </td>
+                                    <td><input type="radio" checked="true" name="check" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="todos"> </td>
                                     <td><strong>Todas las opciones</strong></td>
 
                                 </tr>
 
                                 <tr>
-                                    <td><input type="checkbox" name="check" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="autor"></td>
+                                    <td><input type="radio" name="check" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="autor"></td>
                                     <td><strong>Autor</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="titulo"></td>
+                                    <td><input type="radio"  name="check" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="titulo"></td>
                                     <td><strong>Título</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="materia" ></td>
+                                    <td><input type="radio" name="check" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="materia" ></td>
                                     <td><strong>Materia</strong></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="checkbox" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="codigo"></td>
+                                    <td><input type="radio" name="check" onclick="campo_chec.value = (this.checked) ? this.value : ''" value="codigo"></td>
                                     <td><strong>Código</strong></td>
 
                                 </tr>
 
                             </tbody>
                         </table>
-                        <input  style="visibility: hidden" type="text" name="campo_chec" value="todos">
+                        <input style="visibility: hidden" type="text" name="campo_chec" value="todos">
                     </form>
 
 
@@ -209,7 +207,7 @@ and open the template in the editor.
                                     <?php
                                     header('Content-Type: text/html; charset=UTF-8');
 
-                                    echo '<h2>'. $let .' </h2>';
+                                    echo '<h2>' . $let . ' </h2>';
                                     ?> 
                                 </center>
 

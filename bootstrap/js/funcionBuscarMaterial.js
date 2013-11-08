@@ -34,9 +34,7 @@ function buscarMate() { //esta es la funcion que envia los datos
     expr = /^\s+$/;
     if (campoText == "")
     {
-        alert('<div class="alert alert-dismissable"> <button type="button" class="close" data-dismiss="alert" aria-hidden="true">Debe ingresar el valor de búsqueda3</button> <strong>Warning!</strong> Best check yo self, you re not looking too good. </div>');
-        
-  
+        alert('Debe ingresar el valor de búsqueda');
     }
     else
     if (expr.test(campoText)) {
@@ -46,9 +44,8 @@ function buscarMate() { //esta es la funcion que envia los datos
     else
     if (campo_chec == "")
     {
-
+        alert('Seleccione una opcion de busqueda');
     }
-
     else
     {
         ajax.open("POST", "../Controller/PagresultadoController.php", true);

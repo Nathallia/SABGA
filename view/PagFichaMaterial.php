@@ -9,13 +9,7 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
         <link type="text/css" href="../bootstrap/css/result.css" rel="stylesheet" media="screen">
-        <script>
-            function alerta()
-            {
-                alert('Agrego este material a sus reservas, recuerde realizar las reservas pendientes dando click en el boton Reservas de la barra de herramientas ');
-
-            }
-        </script>
+   
 
     </head>
     <body>
@@ -74,8 +68,8 @@ and open the template in the editor.
                             echo '<table border="2" width="25%" cellspacing="2" cellpadding="2" >';
 
                             echo '<tbody>';
-                            echo '<tr><td  NOWRAP>Codigo de clasificacion: </td><td NOWRAP>' . utf8_encode($fic['codigo_clasificacion']) . '</td></tr>';
-                            echo '<tr><td>Titulo: </td><td NOWRAP>' . utf8_encode($fic['titulo']) . '</td></tr>';
+                            echo '<tr><td  NOWRAP>Codigo de clasificación: </td><td NOWRAP>' . utf8_encode($fic['codigo_clasificacion']) . '</td></tr>';
+                            echo '<tr><td>Título: </td><td NOWRAP>' . utf8_encode($fic['titulo']) . '</td></tr>';
                             echo '<tr><td>Autor (es): </td><td NOWRAP>' . utf8_encode($fic['autores']) . '</td></tr>';
                             echo ' <tr> <td>Materia: </td> <td NOWRAP>' . utf8_encode($fic['materia']) . '</td> </tr>';
                             echo ' <tr> <td>Editorial: </td> <td NOWRAP>' . utf8_encode($fic['nombre_editorial']) . '</td> </tr>';
@@ -97,7 +91,7 @@ and open the template in the editor.
                             if ($ejem == null) {
                                 $opcion = 'No hay ejemplares disponibles';
                             } else {
-                                $opcion = '<a  class="btn btn-inverse" href="?id=' . $fic['id_material'] . '&action=add" >Agregar a Reservas</a> ';
+                                $opcion = '<a  class="btn btn-inverse" href="?id=' . $fic['id_material'] . '&action=add" onclick="alert("se agrego")">Agregar a Reservas</a> ';
                             }
                             echo '<br><br>';
                             echo $opcion;

@@ -16,20 +16,25 @@ function objetoAjax() {
     return xmlhttp;
 }
 
-function enviReserva() { //esta es la funcion que envia los datos de manea asincrona
+//-------------------------------------------------------------------------
+
+
+//_________________________________________________________________________
+function enviarDMrese(docum,materi) { //esta es la funcion que envia los datos 
     //div donde  mostrararemos  los datos de la consulta 
-    divResultado = document.getElementById('contenidoF');
+    divResultado = document.getElementById('bodyP');
 
     //tomamos el valor enviado del formulario de envio
-    correo = document.formuReser.correo.value;
-    documento = document.formuReser.documento.value;
-    //instanciamos el objetoAjax
+//    campoText = document.formulario.campoText.value;
+//    campo_chec = document.formulario.campo_chec.value;
+    
+    documento=docum;
+    material=materi;
+    
     ajax = objetoAjax();
-    //usamos el medoto POST
-    //archivo que realizará la operacion
-    ajax.open("POST", "errorBusqueda.php", true);
+    ajax.open("POST", "../Controller/ReservaC.php", true);
     //mostramos una imagen mientras cargamos el resultado de la consulta
-    divResultado.innerHTML = '<p>Cargando.....</p>';
+    divResultado.innerHTML = '<img src="images/ajax.gif">';
     ajax.onreadystatechange = function() {
         if (ajax.readyState == 4) {
             //visualizamos el resultado correscpondiente
@@ -38,8 +43,6 @@ function enviReserva() { //esta es la funcion que envia los datos de manea asinc
     }
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     //enviando los valoress
-    ajax.send('correo=' + correo + '&documento=' + documento);
+    ajax.send('doc=' + documento + '&material=' + material);
 
 }
-
-

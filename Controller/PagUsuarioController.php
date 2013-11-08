@@ -12,22 +12,17 @@ and open the template in the editor.
 
         <?php
         if (isset($_POST['documento']) && isset($_POST['correo'])) {
+
             $doc = $_POST['documento'];
             $corr = $_POST['correo'];
+//            echo 'documento->'.$doc . '....correo->' . $corr;
         } else {
-            $doc = $docuR;
-            $corr = $correR;
+            echo 'vacio';
         }
 
         require_once '../model/ModeloSabga.php';
-
-
-
         $claUs = new ModeloSabga();
-        $nuevo = $claUs->DatosUsuario($doc, $corr);
-
-
-
+        $nuevo = $claUs->DatosUsuario($doc,$corr);
         $Dreserva = $claUs->Reserva($doc);
         if ($Dreserva != null) {
             $mensaje = '';

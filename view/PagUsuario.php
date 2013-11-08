@@ -51,10 +51,11 @@ and open the template in the editor.
                                     <thead>
 
                                         <tr>
-                                            <th>Codigo Material</th>
-                                            <th>Fecha actual</th>
-                                            <th>Fecha reserva</th>
-                                            <th>Estado reserva</th>
+                                            <th NOWRAP>Codigo Material</th>
+                                            <th NOWRAP>Titulo Material</th>
+                                            <th NOWRAP>Fecha Actual</th>
+                                            <th NOWRAP>Fecha Reserva</th>
+                                            <th NOWRAP>Estado Reserva</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -62,6 +63,7 @@ and open the template in the editor.
                                             <tr>
 
                                                 <td NOWRAP><?php echo $reservasU['codigo_clasificacion'] ?></td>
+                                                <td NOWRAP><?php echo utf8_encode($reservasU['titulo']) ?></td>
                                                 <td NOWRAP><?php echo date("d-m-Y"); ?></td>
                                                 <td NOWRAP><?php echo $reservasU['fecha_reserva'] ?></td>
                                                 <td NOWRAP><?php

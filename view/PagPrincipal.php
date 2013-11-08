@@ -29,11 +29,11 @@ and open the template in the editor.
         <script src="../bootstrap/js/funcionFicha.js" language="JavaScript"></script>
         <script src="../bootstrap/js/funcionBuscarMaterial.js" language="JavaScript"></script>
         <script src="../bootstrap/js/funcionCarro.js" language="JavaScript"></script>
-        <script src="../bootstrap/js/funcionReseL.js" language="JavaScript"></script>
+        
         <title>SABGA</title>
 
     </head>
-    <body>
+    <body id="bodyP">
 
 
         <div class="navbar navbar-inverse nav">

@@ -97,15 +97,15 @@ and open the template in the editor.
         <div >
 
             <div class="texto">
-                <img src="../bootstrap/img/Logo Biblioteca.png" class="logo">
-
+                <img src="../bootstrap/img/banner4.png" class="logo">
+<!--
                 <img  src="../bootstrap/img/IMAGEN_PAG.png" class="imagen">  
 
 
                 <div class="text"> 
                     <h2>Institución Educativa Gilberto Alzate Avendaño</h2>
                     <h1 style="text-align: center">SABGA</h1>
-                </div>
+                </div>-->
 
             </div>
 

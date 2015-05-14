@@ -8,7 +8,7 @@ class conexionSabga {
 
         /* verificar la conexion */
         if (mysqli_connect_errno()) {
-            echo "Hay error de conexion: " . mysqli_connect_error();
+            echo "se encontro un error de conexión: " . mysqli_connect_error();
             exit();
         }
 
